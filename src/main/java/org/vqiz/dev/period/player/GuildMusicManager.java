@@ -12,6 +12,10 @@ public class GuildMusicManager {
         player = manager.createPlayer();
         scheduler = new TrackScheduler(player);
         player.addListener(scheduler);
+        sendHandler = new AudioPlayerSendHandler(player);
 
+    }
+    public AudioPlayerSendHandler getSendHandler(){
+        return sendHandler;
     }
 }
